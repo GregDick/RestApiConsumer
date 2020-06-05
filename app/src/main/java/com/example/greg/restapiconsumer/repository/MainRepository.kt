@@ -13,10 +13,10 @@ class MainRepository {
             .build().create(MainService::class.java)
     }
 
-    suspend fun getData() = webservice.getData()
+    suspend fun getData() = webservice.getData("DEMO_KEY", "json", "1.0")
 
     companion object {
-        const val API_ENDPOINT = "{your api endpoint}"
-        const val BASE_API_URL = "{your api URL}"
+        const val API_ENDPOINT = "/insight_weather/"
+        const val BASE_API_URL = "https://api.nasa.gov?api_key=DEMO_KEY&feedtype=json&ver=1.0"
     }
 }

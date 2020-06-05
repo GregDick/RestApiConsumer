@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         val model: MainViewModel by viewModels()
 
         model.getDataText().observe(this, Observer {
-            findViewById<TextView>(R.id.dataTextView).text = it
+            //todo: replace ResponseBody with actual data model
+            findViewById<TextView>(R.id.dataTextView).text = it.string()
         })
     }
 }
