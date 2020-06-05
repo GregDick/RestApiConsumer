@@ -16,6 +16,10 @@ class MainRepository {
     suspend fun getData() = webservice.getData("DEMO_KEY", "json", "1.0")
 
     companion object {
+        //TODO replace with your API values
+        /**
+         * Example API values from NASA https://api.nasa.gov/
+         */
         const val API_ENDPOINT = "/insight_weather/"
         const val BASE_API_URL = "https://api.nasa.gov?api_key=DEMO_KEY&feedtype=json&ver=1.0"
     }
